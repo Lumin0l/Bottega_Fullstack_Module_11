@@ -24,6 +24,10 @@ CREATE TABLE users (
 );
 ```
 
+## Write Comments
+
+- To write comments in SQL we use double slash: "**--**".
+
 ## Adding Elements to Table
 
 - Once we have created a dabase and a table with different parameters, we can start introducing stuff in it. For that, you need to select database, table and then specify parameters to introduce.
