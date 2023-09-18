@@ -36,4 +36,22 @@ SELECT COUNT(*)
 FROM users;
 ```
 
+## Group By
+
+- It will allow us to create summary reports right In the SQL.
+
+- Let's say we have several addresses saved into a list of states and we want to know how many addresses we have in each states. We would do this:
+
+```
+SELECT addresses_state, COUNT(addresses_state)
+FROM addresses
+GROUP BY addresses_state;
+```
+
+- If we had some guides that we sold to some users, and we wanted to know how much money each user has generated (from all guides) we would do this:
+```
+SELECT guides_users_id, SUM(guides_revenue)
+FROM guides
+GROUP BY guides_users_id;
+```
 
