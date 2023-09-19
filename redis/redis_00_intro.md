@@ -54,3 +54,13 @@ OK
 ## Expire
 
 - Redis is inherently ephemeral, so typing **EXPIRE** + a key name + a number of seconds, will delete that key.
+
+## Show keys
+
+### All keys
+
+- **KEY \***
+
+### Keys with some knowledge
+
+- If you don't remember the whole key but you remember some part, how it started, how it ended you can leverage \* like in sql.
