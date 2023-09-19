@@ -68,3 +68,26 @@ JOIN addresses a
 ON a.addresses_users_id = u.users_id
 ORDER BY g.guides_revenue DESC;
 ```
+
+## Outer Joins
+
+- In inner joins there has to be a relation between the table, in our case: the id, both the user had id and the guides had user_id that was the same. If we do an Inner Join with elements that don't have shared relations, it won't show it.
+
+- For that we use **RIGHT JOIN** and **LEFT JOIN**. With those Joins we will add any other value, the RIGHT and LEFT will put the focal point in the first or the second table to attach:
+
+```
+-- Right Outer Join
+SELECT *
+FROM guides g
+RIGHT JOIN users u
+ON g.guides_users_id = u.users_id;
+
+-- Left Outer Join
+SELECT *
+FROM guides g
+LEFT JOIN users u
+ON g.guides_users_id = u.users_id;
+```
+
+- In the left join we're saying that I want guides to be the focal point
+- In the right we're saying that I want users to be the focal point
