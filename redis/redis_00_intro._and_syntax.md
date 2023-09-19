@@ -23,13 +23,16 @@ OK
 127.0.0.1:6379>
 ```
 
+### GETSET
+
+- SET overrides values without checks, by typing **GETSET**, you will override the previous value, but it will return what was stored as a sort of measure.
+
 ## Key Structure
 
 - In redis we don't have tables, so data is structured in key-value pairs.
 
 - To create those key - value pairs, it is recommended to set an ID first. For example, we want to do a key that tracks likes, we would do it like this:
 - `SET 102:like_count 0` -> where 0 is the value we set as a starter.
-
 
 ## Incrementing and Decrementing
 
@@ -43,3 +46,37 @@ OK
 
 - Just type **DEL** and the key or keys
 - `DEL first_name last_name`
+
+## Exists (Boolean checking)
+
+- Typing **EXISTS** + a key will return a 1 if it exists and a 0 if it doesn't.
+
+## Expire
+
+- Redis is inherently ephemeral, so typing **EXPIRE** + a key name + a number of seconds, will delete that key.
+
+## Show keys
+
+### All keys
+
+- **KEY \***
+
+### Keys with some knowledge
+
+- If you don't remember the whole key but you remember some part, how it started, how it ended you can leverage \* like in sql.
+
+## Hashes
+
+- **HSET** They are ways to create collections and complex structured.
+- They require the key + the field + the value, so you can do thing like this:
+
+```
+127.0.0.1:6379> HSET user name 'Kristine'
+(integer) 1
+127.0.0.1:6379> HSET user email 'kristine@devcamp.com'
+(integer) 1
+127.0.0.1:6379> HGET user name
+"Kristine"
+127.0.0.1:6379> HGET user email
+"kristine@devcamp.com"
+```
