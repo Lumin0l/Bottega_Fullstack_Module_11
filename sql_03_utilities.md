@@ -8,8 +8,19 @@
 ## Create Random Numbers
 
 - With **RAND**:
+
 ```
 BEGIN;
 UPDATE guides
 SET guides_qty = RAND()*1000;
+```
+
+## Cast Names to Rows
+
+- You can name rows to create name -> value pairs. Those pairs will remain when exported so it's a good practice:
+- Example:
+
+```
+SELECT 'Email:', users_email, 'Name:', users_name
+FROM users;
 ```
