@@ -23,13 +23,16 @@ OK
 127.0.0.1:6379>
 ```
 
+### GETSET
+
+- SET overrides values without checks, by typing **GETSET**, you will override the previous value, but it will return what was stored as a sort of measure.
+
 ## Key Structure
 
 - In redis we don't have tables, so data is structured in key-value pairs.
 
 - To create those key - value pairs, it is recommended to set an ID first. For example, we want to do a key that tracks likes, we would do it like this:
 - `SET 102:like_count 0` -> where 0 is the value we set as a starter.
-
 
 ## Incrementing and Decrementing
 
@@ -51,4 +54,3 @@ OK
 ## Expire
 
 - Redis is inherently ephemeral, so typing **EXPIRE** + a key name + a number of seconds, will delete that key.
-
