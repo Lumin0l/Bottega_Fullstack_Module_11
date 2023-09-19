@@ -55,3 +55,15 @@ FROM guides
 GROUP BY guides_users_id;
 ```
 
+## Formulas and Math
+
+- We can do math and calculations in mySQL, like let's say we want to check the ammount of money each guide has done:
+```
+SELECT
+guides_title,
+guides_revenue,
+guides_qty,
+guides_revenue / guides_qty
+FROM guides;
+```
+
