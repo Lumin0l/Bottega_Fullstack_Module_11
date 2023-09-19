@@ -64,19 +64,3 @@ OK
 ### Keys with some knowledge
 
 - If you don't remember the whole key but you remember some part, how it started, how it ended you can leverage \* like in sql.
-
-## Hashes
-
-- **HSET** They are ways to create collections and complex structured.
-- They require the key + the field + the value, so you can do thing like this:
-
-```
-127.0.0.1:6379> HSET user name 'Kristine'
-(integer) 1
-127.0.0.1:6379> HSET user email 'kristine@devcamp.com'
-(integer) 1
-127.0.0.1:6379> HGET user name
-"Kristine"
-127.0.0.1:6379> HGET user email
-"kristine@devcamp.com"
-```
